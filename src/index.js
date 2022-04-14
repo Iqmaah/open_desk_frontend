@@ -10,6 +10,7 @@ import Welcome from './components/Welcome/Welcome'
 import PlansCard from './components/Plans/PlansCard'
 
 
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>

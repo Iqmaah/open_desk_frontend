@@ -3,7 +3,7 @@
 
 const PlansCard = () => {
     return(
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
             <div className= "grid grid-rows-2 gap-4 p-6 max-w-sm rounded-lg border   border-gray-200 shadow-md bg-[#E2698D] bg-image1 bg-no-repeat bg-right text-white ">
                     <div className="">

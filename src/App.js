@@ -5,7 +5,9 @@ import HerVest from './components/images/hervest.svg'
 import Welcome from './components/Welcome/Welcome'
 import SavingsCard from './components/Savings/SavingsCard';
 import PlansCard from './components/Plans/PlansCard';
-import Union from './components/images/union.svg'
+
+
+
 
 
 const App = () => {
@@ -33,22 +35,20 @@ const App = () => {
        
 
   return (
-    <div className="flex flex-row w-full">
-        <div className="w-3/12 bg-white sm:none ">
-             <div className="p-6">
-               <div className='flex align-items-end justify-content-center'>
-                 <img src={Union} alt='Union' style={{display:"inline"}} className="mr-4"/>
-                  {/* <img src={HerVest} alt='HerVest' style={{display:"inline"}}/>  */}
-                  <h1 className="text-[#E2698D] font-bold text-2xl">HerVest</h1>
-                
-               </div>
-                <Menu/>
+    
+      <div className="flex min-h-screen bg-slate-50">
+       
+            
+           {/* <div className="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-visible y-auto bg-white">   */}
+          
+              
+                    
+                    <Menu/>
 
-             </div>
-        </div>
+             
+    
 
-
-        <div className="w-full md:w-9/12 bg-slate-50 ">
+        <div className=" flex-1 w-full mx-auto bg-slate-50 ">
             <div className="p-10">
                 <Welcome/><br/>
                 <div>
@@ -56,7 +56,7 @@ const App = () => {
                   <p className='text-sm text-gray-400'>A goal without a plan is just a wish</p>
                 </div><br/>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   {
                   
                     datas.map((data,i) => <SavingsCard key={data.id} hervest={data}/>)
@@ -74,8 +74,12 @@ const App = () => {
 
             </div>
         </div>
+
+        
         
       </div>
+
+    
   )
 }
 

@@ -4,6 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens:{
+      sm: '360px',
+      md: '700px',
+      lg: '1024px',
+      xl: '1248px'
+    },
     extend: {
       backgroundImage: theme => ({
         'pinkbg': "url('/src/components/images/pinkbg.png')",
