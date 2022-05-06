@@ -1,59 +1,134 @@
+
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './../../assets/styles/custom.css'
-import { Link} from 'react-router-dom'
-// import opendesklogo from '../../assets/images/opendesklogo.png'
+import opendesklogo from '../../assets/images/opendesklogo.png'
+import { navigation } from "../../data/header";
 
+const Container = ({ children }) => {
 
-const Container = () => {
+  
+    const [openMobileMenu, setOpenMobileMenu] = useState(false)
     return (
         <>
             <header>
            
-                <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-                        <div className="container flex flex-wrap justify-between items-center mx-auto">
-                            <a href="https://flowbite.com" className="flex items-center">
-                                <img src="/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Logo" />
-                                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                            </a>
-                            <button data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
-                            <span className="sr-only">Open main menu</span>
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                            <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
-                            <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                                <li>
-                                <Link to="/auth/start-forget-password"
-                                    className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home
-                                </Link>
-                                </li>
-                                <li>
-                                <Link to="/auth/start-forget-password"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About
-                                </Link>
-                                </li>
-                                <li>
-                                <Link to="/auth/start-forget-password"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services
-                                </Link>
-                                </li>
-                                <li>
-                                <Link to="/auth/start-forget-password"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing
-                                </Link>
-                                </li>
-                                <li>
-                                <Link to="/auth/start-forget-password"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
-                                </Link>
-                                </li>
-                            </ul>
-                            </div>
+                <nav className="bg-white">
+                <div className="max-w-7xl mx-auto p-5">
+                    <div className="relative flex items-center justify-between h-16">
+                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        {/* <!-- Mobile menu button--> */}
+                        <button
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+                            aria-label="Main menu"
+                            aria-expanded="false"
+                            onClick={() => setOpenMobileMenu(!openMobileMenu)}
+                        >
+                            <svg
+                                className="block h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                            {/* <!-- Icon when menu is open. -->
+                        <!--
+                            Heroicon name: x
+
+                            Menu open: "block", Menu closed: "hidden"
+                        --> */}
+                            <svg
+                                className="hidden h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                        <div className="flex-shrink-0 lg:mt-2 md:mt-2">
+                        
+                            <img src={opendesklogo} className=" w-full" alt="OpenDeskLogo"/>
+                      
                         </div>
+                        <div className="hidden sm:block sm:ml-6">
+                        <div className="flex">
+                            {
+                              navigation.map(({ href, title }) => (
+                               
+                            <a href={href} className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                                key={title}
+                            >{title} </a>
+                                            
+                            ))
+                            }
+                        </div>
+                        </div>
+                    </div>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        <button
+                        className="hidden sm:hidden md:block btn-blue flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+                        aria-label="Join now"
+                        >
+                        Join now
+                        </button>
+                        
+
+                       
+                    </div>
+                    </div>
+                </div>
+
+                {/* <!--
+                Mobile menu, toggle classes based on menu state.
+
+                Menu open: "block", Menu closed: "hidden"
+            --> */}
+                {openMobileMenu && (
+                    <div className="md:hidden lg:hidden sm:block">
+                    <div className="px-2 pt-2 pb-3">
+                        {navigation.map(({ href, title }) => (
+                        <a
+                            href={href}
+                            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                            key={title}
+                        >
+                            {title}
+                        </a>
+                        ))}
+
+                        <span class="inline-flex rounded-md shadow-sm">
+                        <a
+                            href="/join-now"
+                            className="whitespace-no-wrap inline-flex items-center justify-center my-2 px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                        >
+                            Join now
+                        </a>
+                        </span>
+                    </div>
+                    </div>
+                )}
                 </nav>
 
             </header>
+            <br /><br /><br /><br />
 
-            {/* {children} */}
+             {children}
 
             <footer>
                 <div className="container mx-auto">
