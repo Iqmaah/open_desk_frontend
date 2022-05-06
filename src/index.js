@@ -7,11 +7,12 @@ import reportWebVitals from './reportWebVitals';
 import Container from './components/pages/Container'
 import HomePage from './components/pages/HomePage/HomePage';
 import About from './components/pages/About/About'
+import Gallery from './components/pages/Gallery/Gallery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <About/>
+    <Gallery/>
   </React.StrictMode>
 );
 

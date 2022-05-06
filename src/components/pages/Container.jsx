@@ -1,12 +1,13 @@
 import './../../assets/styles/custom.css'
 import { Link} from 'react-router-dom'
-// import opendesklogo from '../../assets/images/opendesklogo.png'
+import opendesklogo from '../../assets/images/opendesklogo.png'
+import opendesklogowhite from '../../assets/images/opendesklogowhite.png'
 
 
 const Container = () => {
     return (
         <>
-            <header>
+            {/* <header>
            
                 <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
                         <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -51,14 +52,16 @@ const Container = () => {
                         </div>
                 </nav>
 
-            </header>
+            </header> */}
 
             {/* {children} */}
 
             <footer>
-                <div className="container mx-auto">
+                <div className="container mx-auto bg-[#09C5AD] ">
                     <div className="grid grid-cols-3 gap-4 place-items-center">
-                        <div>01</div>
+                        <div className="bg-logowhite">
+                            
+                        </div>
 
                         <div>02</div>
 
