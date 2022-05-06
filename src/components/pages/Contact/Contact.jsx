@@ -54,41 +54,37 @@ const Contact = () => {
             </div>
 
             <form className="w-full max-w-lg mx-60">
-                <div class="flex -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="uppercase text-black text-xs font-bold mb-2" for="grid-NAME">   
-                    </label>
-                    <input className="block w-full text-black bg-white border drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-NAME" type="text" placeholder="NAME"/>
+                <div className="flex -mx-3 mb-6">
+                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    
+                    <input className="block w-full placeholder-text-black text-black bg-white border text-lg h-16 drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-NAME" type="text" placeholder="NAME"/>
                     </div>
                 </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                    </label>
-                    <input class="block w-full text-black bg-white border drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder='EMAIL'/>
+                <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="w-full px-3">
+                   
+                    <input className="block w-full placeholder-text-black text-black bg-white border text-lg h-16 drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder='EMAIL'/>
                     </div>
                 </div>
-                <div class="flex -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="uppercase text-black text-xs font-bold mb-2" for="grid-SUBJECT">   
-                    </label>
-                    <input className="block w-full text-black bg-white border drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-SUBJECT" type="text" placeholder="SUBJECT"/>
+                <div className="flex -mx-3 mb-6">
+                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    
+                    <input className="block w-full placeholder-text-black text-black bg-white border text-lg h-16 drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-SUBJECT" type="text" placeholder="SUBJECT"/>
                     </div>
                 </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                    </label>
-                    <textarea class="no-resize appearance-none block w-full bg-gray-200 text-black border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" placeholder='MESSAGE'></textarea>
+                <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="w-full px-3">
+                    
+                    <textarea className="no-resize placeholder-text-black appearance-none block w-full bg-gray-200 text-black border text-lg rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" placeholder='MESSAGE'></textarea>
                     </div>
                 </div>
-                <div class="md:flex md:items-center">
-                    <div class="md:w-1/2">
-                    <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                <div className="md:flex md:items-center">
+                    <div className="md:w-1/2">
+                    <button className="shadow bg-teal-400 h-12 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                         SEND MESSAGE
                     </button>
                     </div>
-                    <div class="md:w-2/3"></div>
+                    <div className="md:w-2/3"></div>
                 </div>
             </form>
 
