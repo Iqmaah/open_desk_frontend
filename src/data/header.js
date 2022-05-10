@@ -1,8 +1,9 @@
 
   export const navigation = [
-    { title: "HOME", href: "/find-a-dentist" },
-    { title: "ABOUT", href: "/pick-your-plan" },
-    { title: "BOOKING", href: "/faq" },
-    { title: "CONTACT", href: "/support" }
+    { title: "HOME", href: "/home" },
+    { title: "ABOUT", href: "/about" },
+    { title: "GALLERY", href: "/gallery" },
+    { title: "BOOKING", href: "/booking" },
+    { title: "CONTACT", href: "/contact" }
   ];
   

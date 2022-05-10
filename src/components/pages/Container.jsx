@@ -3,7 +3,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './../../assets/styles/custom.css'
 import opendesklogo from '../../assets/images/opendesklogo.png'
-import { navigation } from "../../data/header";
+import { navigation } from "../../data/header"
+import { footerNavigation } from "../../data/footer";
+import opendesklogowhite from '../../assets/images/opendesklogowhite.png'
+import facebook from '../../assets/images/facebook.png'
+import instagram from '../../assets/images/instagram.png'
+import twitter from '../../assets/images/twitter.png'
+import linkedin from '../../assets/images/linkedin.png'
 
 const Container = ({ children }) => {
 
@@ -11,136 +17,149 @@ const Container = ({ children }) => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false)
     return (
         <>
-            <header>
+              
            
-                <nav className="bg-white">
-                <div className="max-w-7xl mx-auto p-5">
-                    <div className="relative flex items-center justify-between h-16">
-                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        {/* <!-- Mobile menu button--> */}
+               <header className="container mx-auto py-3 md:py-2">
+                    <div className="px-4 mx-auto md:flex md:items-center">
+
+                    <div className="flex justify-between items-center">
+                        <img src={opendesklogo} alt="opendesklogo" className="h-40" />
+                       
                         <button
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-                            aria-label="Main menu"
-                            aria-expanded="false"
-                            onClick={() => setOpenMobileMenu(!openMobileMenu)}
+                        className="inline-flex items-center justify-center p-2 md:hidden rounded-md text-gray-400 hover:text-white hover:bg-[#125EC5] focus:outline-none focus:bg-[#125EC5] focus:text-white transition duration-150 ease-in-out"
+                        aria-label="Main menu"
+                        aria-expanded="false"
+                        onClick={() => setOpenMobileMenu(!openMobileMenu)}
                         >
-                            <svg
-                                className="block h-6 w-6"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
+                        <svg
+                            className="block h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
                                 d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                            {/* <!-- Icon when menu is open. -->
-                        <!--
-                            Heroicon name: x
-
-                            Menu open: "block", Menu closed: "hidden"
-                        --> */}
-                            <svg
-                                className="hidden h-6 w-6"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
+                            />
+                        </svg>
                         </button>
                     </div>
-                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                        <div className="flex-shrink-0 lg:mt-2 md:mt-2">
-                        
-                            <img src={opendesklogo} className=" w-full" alt="OpenDeskLogo"/>
-                      
-                        </div>
-                        <div className="hidden sm:block sm:ml-6">
-                        <div className="flex">
-                            {
-                              navigation.map(({ href, title }) => (
-                               
-                            <a href={href} className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+
+                    <div className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
+          
+                        {navigation.map(({ href, title }) => (
+                            <a
+                                href={href}
+                                className="p-2 lg:px-4 md:mx-2 text-black hover:text-[#125EC5] hover:underline decoration-2 underline-offset-8"
                                 key={title}
-                            >{title} </a>
-                                            
-                            ))
-                            }
-                        </div>
-                        </div>
-                    </div>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <button
-                        className="hidden sm:hidden md:block btn-blue flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
-                        aria-label="Join now"
-                        >
-                        Join now
-                        </button>
+                            >
+                                {title}
+                            </a>
+                             ))
+                        }
                         
-
-                       
-                    </div>
+                        <a href="/booking" className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-solid border-indigo-600 rounded hover:bg-indigo-600 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1">HOP IN</a>
                     </div>
                 </div>
-
-                {/* <!--
-                Mobile menu, toggle classes based on menu state.
-
-                Menu open: "block", Menu closed: "hidden"
-            --> */}
+                
                 {openMobileMenu && (
                     <div className="md:hidden lg:hidden sm:block">
                     <div className="px-2 pt-2 pb-3">
                         {navigation.map(({ href, title }) => (
                         <a
                             href={href}
-                            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black hover:text-white hover:bg-[#125EC5] focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
                             key={title}
                         >
                             {title}
                         </a>
                         ))}
 
-                        <span class="inline-flex rounded-md shadow-sm">
-                        <a
-                            href="/join-now"
-                            className="whitespace-no-wrap inline-flex items-center justify-center my-2 px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-                        >
-                            Join now
-                        </a>
-                        </span>
                     </div>
                     </div>
                 )}
-                </nav>
+              </header>
 
-            </header>
-            <br /><br /><br /><br />
+            <div>
 
-             {children}
+            {children}
+            </div>
 
-            <footer>
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-3 gap-4 place-items-center">
-                        <div>01</div>
-
-                        <div>02</div>
-
-                        <div>09</div>
+          
+      <footer>
+        <div className="flex flex-col mx-auto items-center text-white bg-[#09C5AD]">
+          <div className="container">
+            <div className="flex md:flex-row sm:flex-col flex-col py-5 px-5">
+            <div className="flex mb-4 w-full">
+                <div className="w-2/3">
+                    <img src={opendesklogowhite} alt="Opendesk Logo" className="h-40" />
+                    <div className="flex md:flex-row flex-col">
+                        <div><img src={facebook} alt='facebook' className='h-5'/> </div>&nbsp;&nbsp;
+                        <div><img src={instagram} alt='Instagram'className='h-5' /></div>&nbsp;&nbsp;
+                        <div><img src={linkedin} alt='Linkedin' className='h-5'/></div>&nbsp;&nbsp;
+                        <div><img src={twitter} alt='Twitter' className='h-5'/></div>
+                        <div> &nbsp;&nbsp;&nbsp; © {new Date().getFullYear()} </div>
                     </div>
                 </div>
-            </footer>
+                <div className="w-1/3">Address goes in here</div>
+                    <div className="w-1/3 pt-7" style={{ fontSize: "18px", fontFamily: 'Montserrat' }}>
+                     <p> We give remote workers access to short term co-working and co-living spaces, all around. </p>          
+                    </div>
+            </div>
+              {/* <div className="px-2">
+                
+                 <img src={opendesklogowhite} alt="Opendesk Logo" className="" />
+                    <div className="flex md:flex-row flex-col">
+                        <div><img src='' alt='facebook' /></div>
+                        <div><img src='' alt='facebook' /></div>
+                        <div><img src='' alt='facebook' /></div>
+                        <div><img src='' alt='facebook' /></div>
+                        <div> © {new Date().getFullYear()} </div>
+                    </div>
+              </div>
+              <div className="px-2">
+                    <br /><br /><br /> 
+                     <p> 18 Ijagbemi street, pedro rd, Somolu</p>
+              </div>
+              <div className="px-2">
+                <p className="text-xs">
+                  Perfect Teeth Dental Plan is NOT INSURANCE, but rather a
+                  licensed dental savings plan offered through your local dental
+                  office. Members in good standing with their annual membership
+                  fee are eligible to receive transparent, member-only discounts
+                  from the normal retail fees that participating offices
+                  typically charge self-pay patients for dental services
+                  rendered. Plan details and member savings are exclusive to
+                  participating offices and may vary by location. Membersy does
+                  not make payments directly to dental providers for services
+                  rendered to plan members. Members are obligated to pay for all
+                  dental services, but will receive a discount on services
+                  rendered by participating dental providers. The plan is not a
+                  qualified health plan under the Affordable Health Act. The
+                  plan does not meet the minimum creditable coverage
+                  requirements under MGLC.111M and 956 CMR 5.00. Discount
+                  Medical Plan Organization (“DMPO”) and plan administrator:
+                  Membersy LLC, 811 Barton Springs Rd. Ste. 750, Austin, TX
+                  78704.
+                </p>
+              </div> */}
+                            
+            </div>
+          </div>
+        </div>
+
+        {/* subfooter */}
+        {/* <div className="bg-blue-400 py-2 text-white flex w-full">
+          <div className="text-center w-full">
+            <span>
+              © {new Date().getFullYear()} - OpenDesk - All Rights Reserved
+            </span>
+          </div>
+        </div> */}
+      </footer>
 
 
         </>

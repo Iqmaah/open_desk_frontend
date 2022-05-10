@@ -9,11 +9,11 @@ import rectangle1 from '../../../assets/images/rectangle1.png'
 
 const About = () => {
     return(
-        <div className="container mx-auto px-12">
+        <div className="container mx-auto px-12 bg-white">
             
                 <div className='flex space-x-28 py-24'>
                     <div className="">
-                        <h1 className="text-lg pt-16 ">ABOUT US</h1>
+                        <h1 className="text-lg pt-16 font-medium">ABOUT US</h1>
                         <h1 className="text-8xl font-bold py-8">who we are</h1>
                         <p className="text-4xl pb-4"> We are an affordable, centrally located</p> 
                         <p className="text-4xl pb-4">world class business incubation and growth </p>
