@@ -51,13 +51,13 @@ const Container = ({ children }) => {
                     <div className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
           
                         {navigation.map(({ href, title }) => (
-                            <a
-                                href={href}
+                            <Link
+                                to={href}
                                 className="p-2 lg:px-4 md:mx-2 text-black hover:text-[#125EC5] hover:underline decoration-2 underline-offset-8"
                                 key={title}
                             >
                                 {title}
-                            </a>
+                            </Link>
                              ))
                         }
                         

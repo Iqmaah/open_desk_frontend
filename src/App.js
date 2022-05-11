@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import './assets/styles/toastify.css'
 import HomePage from './components/pages/HomePage/HomePage';
 import About from './components/pages/About/About'
+import Contact from './components/pages/Contact/Contact'
+import Bookings from './components/pages/Booking/Booking'
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <BrowserRouter>
         <Routes>   
             <Route  path="/" element={<HomePage />} />
-            <Route  path="/auth/login" element={<About />} />
+            <Route  path="/about" element={<About />} />
+            <Route  path="/contact" element={<Contact />} />
+            <Route  path="/bookings" element={<Bookings />} />
             <Route path="*" element={<HomePage />} />
         </Routes>
 

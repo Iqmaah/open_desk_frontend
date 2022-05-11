@@ -4,9 +4,11 @@ import socials from '../../../assets/images/socials.png'
 import location from '../../../assets/images/location.png'
 import phone from '../../../assets/images/phone.png'
 import message from '../../../assets/images/message.png'
+import Container from '../../../components/pages/Container'
 
 const Contact = () => {
-    return(
+    return (
+        <Container>
         <div className="container mx-auto bg-white">
 
             <div className="flex space-x-40 py-20 pb-52 mx-40">
@@ -89,6 +91,7 @@ const Contact = () => {
             </form>
 
         </div>
+        </Container>
     )
 }
 

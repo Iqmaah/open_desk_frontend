@@ -7,10 +7,18 @@ import '../../../assets/styles/custom.css'
 import Container from '../../../components/pages/Container'
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import BookingModal from '../../shared/BookingModal'
 
 const HomePage = () => {
 
+    const [showBookingModal, setshowBookingModal] = useState(false)
+    const bookingClick = () => {
+        setshowBookingModal(true)
+    }
+    const closeBTNClick = () => {
+        setshowBookingModal(false)
+    }
     useEffect(() => { 
         new Accordion('.accordion-container');
     }, [])
@@ -131,7 +139,7 @@ const HomePage = () => {
                                                 <p className="p-2">Utilities Included </p><hr />
                                             
                                             </div>
-                                            <button className="bg-blue-600 hover:bg-blue-dark text-white text-xs font-bold py-5 px-20 rounded-full">
+                                            <button onClick={bookingClick} className="bg-blue-600 hover:bg-blue-dark text-white text-xs font-bold py-5 px-20 rounded-full">
                                                 BOOK NOW
                                             </button>
                                         </div>
@@ -273,6 +281,9 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+
+
+                {showBookingModal ? <BookingModal onClick={closeBTNClick} /> : null }
 
             </div>
         </Container>

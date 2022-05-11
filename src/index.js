@@ -11,12 +11,12 @@ import Login from './components/pages/Login/Login';
 import Booking from './components/pages/Booking/Booking';
 import Contact from './components/pages/Contact/Contact';
 import Dashboard from './components/pages/Dashboard/Dashboard';
+import BookingModal from './components/shared/BookingModal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HomePage/>
-
+    <App/>
   </React.StrictMode>
 );
 

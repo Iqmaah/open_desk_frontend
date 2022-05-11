@@ -12,170 +12,7 @@
   
   /* Body defaults */
   
-  html,
-  body {
-    font-family: "Gelato Soft", sans-serif;
-    font-size: 16px;
-    color: #000000;
-    background-color: #f6f7fb;
-    line-height: 1.25;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 
-  
-
-  .cheching {
-    border: 1px solid #8cb13d;
-    background-color: #8cb13d31;
-  }
-  
-  .wealth-buddy--cta {
-    min-height: 46px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
-    cursor: pointer;
-    border: 1px solid;
-    line-height: 1;
-    outline: none !important;
-  }
-  
-  .wealth-buddy--cta:disabled {
-    background-color: #ccdf8c;
-  }
-  
-  
-  .card {
-    background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-radius: 14px;
-  }
-  
-  .create-savings > * {
-    max-width: calc(50% - 16px);
-    min-height: 103px;
-    overflow: hidden;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .savings-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-    max-width: 125px;
-  }
-  
-  .savings-items {
-    padding: 25px;
-  }
-  
-  .savings-image {
-    height: 100%;
-    min-width: 125px;
-  }
-  
-  .card {
-    margin-bottom: 26px;
-  }
-  
-  .card-header {
-    font-size: 1.25rem;
-  }
-  
-  .card-excerpt {
-    font-size: 0.875rem;
-    line-height: 1.45;
-  }
-  
-  nav {
-    max-width: 305px;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    transition: max-width 0.5s;
-    -webkit-transition: max-width 0.5s;
-    -moz-transition: max-width 0.5s;
-    -ms-transition: max-width 0.5s;
-    -o-transition: max-width 0.5s;
-  }
-  
-  nav > * {
-    z-index: 1;
-  }
-  
-  .create-saving--overview {
-    max-width: 1120px;
-    margin-right: auto;
-  }
-  
-  .navShape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  .navShape svg {
-    height: auto;
-    width: 100%;
-  }
-  
-  .navIcons img {
-    min-width: 18px;
-    height: auto;
-    display: flex;
-  }
-  
-  nav figure > img {
-    height: 96px;
-    width: 96px;
-  }
-  
-  .navIcons li {
-    padding-left: 35px;
-    padding-right: 35px;
-    margin-bottom: 5px;
-  }
-  
-  .navIcons li a {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-  }
-  
-  .active {
-    background: #6f8a15;
-  }
-  
-  .create-card {
-    padding: 55px 70px 40px;
-    width: calc(50% - 16px);
-  }
-  
-  .overview-full {
-    max-width: 100%;
-    margin: 0;
-  }
   
   fieldset label + input,
   fieldset label + select,
@@ -1827,8 +1664,8 @@
       height: 34rem;
     }
     .auth-modal {
-      width: 100%;
-      max-width: 550px;
+      width: 85%;
+      /* max-width: 550px; */
       padding: 45px 40px;
     }
     .personal-wrap {
@@ -1910,8 +1747,8 @@
       height: 34rem;
     }
     .auth-modal {
-      width: 100%;
-      max-width: 550px;
+      width: 85%;
+      /* max-width: 550px; */
       padding: 45px 40px;
     }
     .personal-wrap {

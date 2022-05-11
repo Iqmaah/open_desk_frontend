@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className="flex min-h-screen bg-slate-50">
 
                 {/* sidebar */}
-            <div className='hidden sm:block w-1/4 bg-[#09C5AD]'>
+            <div className='hidden relative sm:block w-1/4 bg-[#09C5AD]'>
                 <div className=" mx-5 mb-5">
                     <img src={opendesklogowhite}></img>
                 </div>
@@ -49,6 +49,13 @@ const Dashboard = () => {
                         </li><br/>
 
                     </ul>
+                </div>
+
+                <div className='absolute bottom-16 mx-5'>
+                    <button type="submit" className="text-white bg-blue-600 hover:bg-blue-dark focus:ring-4 
+                        focus:outline-none focus:ring-teal-300 font-medium rounded-full text-2xl px-20 py-2 text-center 
+                        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">LOG OUT
+                    </button>
                 </div>
 
             </div>
