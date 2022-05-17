@@ -13,7 +13,7 @@ const About = () => {
         <Container>
             <div className="container mx-auto px-12 bg-white">
                 
-                    <div className='flex space-x-28 py-24'>
+                    {/* <div className='flex space-x-28 py-24'>
                         <div className="">
                             <h1 className="text-lg pt-16 font-medium">ABOUT US</h1>
                             <h1 className="text-8xl font-bold py-8">who we are</h1>
@@ -28,56 +28,73 @@ const About = () => {
                             <img src={aboutImage}></img>
                         </div>
                         <div className='absolute w-32 h-32 rounded-full bg-blue-600 -bottom-8 right-8' ></div> 
+                    </div> */}
+
+                    <div class="grid grid-cols-2 gap-4 py-24">
+                        <div>
+                            <h1 className="text-lg pt-16" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>ABOUT US</h1>
+                            <h1 className="font-bold py-8" style={{fontFamily:"Gelato Soft Free", fontSize: "106px", lineHeight: "96px" }}>who we are</h1>
+                            <p className="text-4xl pb-4" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}> We are an affordable, centrally located 
+                            world class business incubation and growth hub committed to providing its partners with
+                            top quality business support services that create significant value for all stakeholders.</p> 
+                        </div>
+                        
+                        <div className="hidden md:block">
+                        <div className="relative">
+                            <img src={aboutImage}></img>
+                        </div>
+                        <div className='hidden lg:block absolute w-32 h-32 rounded-full bg-blue-600 -bottom-8 right-8' ></div>
+                        </div>
                     </div>
 
-                    <div className="text-4xl">Our offerings include virtual and serviced spaces under our partner program to new 
+                    <div className="text-4xl pt-8 pb-20" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>Our offerings include virtual and serviced spaces under our partner program to new 
                         and growing businesses, ideally furnished training rooms in a serene and conducive 
                         environment for corporate<br/> learning events as well as well-equipped meeting rooms.
                     </div>
 
                     <div class="flex flex-row space-x-20 py-24 ">
                         <div>
-                            <h1 className="text-5xl font-bold">We also have space <br/> that suits you</h1><br /><br />
-                            <div class="grid grid-cols-2 gap-12">
+                            <h1 className=" font-bold" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "51px", lineHeight: "61.21px" }}>We also have space <br/> that suits you</h1><br /><br />
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div>
                                 <a href="#" className="block p-6 max-w-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img src={icon1} className="w-20 h-20"></img>
-                                    <h5 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">training room</h5>
+                                    <h5 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "33px", lineHeight: "39.61px" }}>training room</h5>
                                     <img src={rectangle}></img>
-                                    <p className="mt-4 font-normal text-lg dark:text-gray-400">Testimonies abound from <br/>the use of our space for<br/> tranings and meetings. </p>
+                                    <p className="mt-4 font-normal dark:text-gray-400" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "22px", lineHeight: "42px"}}>Testimonies abound from the use of our space for tranings and meetings. </p>
                                 </a>
                                 </div>
                                 
                                 <div>
                                 <a href="#" className="block p-6 max-w-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img src={icon2} className="w-20 h-20"></img>
-                                    <h5 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">virtual office</h5>
+                                    <h5 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "33px", lineHeight: "39.61px" }}>virtual office</h5>
                                     <img src={rectangle}></img>
-                                    <p className="mt-4 font-normal text-lg dark:text-gray-400">For a token, you can use <br/>our facility as your office<br/> contact address with<br/> several benefits. </p>
+                                    <p className="mt-4 font-normal dark:text-gray-400" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "22px", lineHeight: "42px"}}>For a token, you can use our facility as your office contact address with several benefits. </p>
                                 </a>
                                 </div>
 
                                 <div>
                                 <a href="#" className="block p-6 max-w-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img src={icon3} className="w-20 h-20"></img>
-                                    <h5 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">serviced offices</h5>
+                                    <h5 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "33px", lineHeight: "39.61px" }}>serviced offices</h5>
                                     <img src={rectangle}></img>
-                                    <p className="mt-4 font-normal text-lg dark:text-gray-400">Get the right environment <br/>you desire for work as you <br/>use our desk space for<br/> your day-to-day work. </p>
+                                    <p className="mt-4 font-normal dark:text-gray-400" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "22px", lineHeight: "42px"}}>Get the right environment you desire for work as you use our desk space for your day-to-day work. </p>
                                 </a>
                                 </div>
 
                                 <div>
                                 <a href="#" className="block p-6 max-w-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img src={icon4} className="w-20 h-20" />
-                                    <h5 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">consulting</h5>
+                                    <h5 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "33px", lineHeight: "39.61px" }}>consulting</h5>
                                     <img src={rectangle}></img>
-                                    <p className="mt-4 font-normal text-lg dark:text-gray-400">We provide tailored bus-<br/>iness support solutions for <br/>effective and efficient<br/> business operations. </p>
+                                    <p className="mt-4 font-normal dark:text-gray-400" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "22px", lineHeight: "42px"}}>We provide tailored bus-iness support solutions for effective and efficient business operations. </p>
                                 </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="pr-16">
+                        <div className="hidden lg:block pr-16">
                             <img src={rectangle1}></img>
                         </div>
             

@@ -11,15 +11,15 @@ const Contact = () => {
         <Container>
         <div className="container mx-auto bg-white">
 
-            <div className="flex space-x-40 py-20 pb-52 mx-40">
-                <div className='pt-28'>
-                    <h1 className="text-lg pt-16 font-medium">CONTACT US</h1>
-                    <h1 className="text-7xl font-bold pb-10 ">say hello</h1>
-                    <p className="text-4xl pb-2">Your email address will not be published.</p>
-                    <p className="text-4xl pb-2">and we promise not to spam!</p>
+            <div className="flex space-x-40 mx-40 md:pb-52 py-20">
+                <div className='md:pt-28'>
+                    <h1 className="md:pt-16 font-medium" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>CONTACT US</h1>
+                    <h1 className="font-bold pb-10" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "106px", lineHeight: "96px" }}>say hello</h1>
+                    <p className="pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>Your email address will not be published.</p>
+                    <p className="pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>and we promise not to spam!</p>
                 </div>
 
-                <div>
+                <div className="hidden md:block">
                     <div className='z-50 absolute'>
                         <img src={blue}></img>
                     </div>
@@ -29,7 +29,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="flex flex-row py-32 mx-40 space-x-20">
+            <div className="flex flex-col md:flex-row py-32 mx-40 md:space-x-20">
                 <div className="flex-auto block p-6 max-w-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
                     <img src={location} className=""></img>
                     <h5 className="my- text-lg font-semibold dark:text-white">CA 560 Bush St & 20th Ave, Apt 5 San Francisco, 230909, Canada</h5>
@@ -49,15 +49,15 @@ const Contact = () => {
             <hr className="mx-40 pb-24" style={{width:"75%", margin: "center"}}/>
 
             <div className='mx-40 mb-10'>
-                <p className="text-3xl pb-2">Have a Question?</p>
-                <h1 className="text-8xl font-bold pb-10 ">Send a Message</h1>
-                <p className="text-3xl pb-2">Your email address will not be published.</p>
-                <p className="text-3xl pb-2">and we promise not to spam!</p>
+                <p className="pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>Have a Question?</p>
+                <h1 className="font-bold pb-10" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "106px", lineHeight: "96px" }}>Send a Message</h1>
+                <p className="pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>Your email address will not be published.</p>
+                <p className="pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}>and we promise not to spam!</p>
             </div>
 
-            <form className="w-full max-w-lg mx-60">
+            <form className="w-full max-w-lg min-w-sm mx-60">
                 <div className="flex -mx-3 mb-6">
-                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <div className="w-full px-3 mb-6 md:mb-0">
                     
                     <input className="block w-full placeholder-text-black text-black bg-white border text-lg h-16 drop-shadow-md rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-NAME" type="text" placeholder="NAME"/>
                     </div>

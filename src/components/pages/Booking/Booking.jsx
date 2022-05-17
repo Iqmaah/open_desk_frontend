@@ -15,27 +15,28 @@ const Booking = () => {
 
                 <div className="flex space-x-8 py-28 mx-20">
                     <div>
-                        <h1 className="text-8xl font-bold py-8">book a space now</h1>
-                        {/* <img src={arrow} alt="Book a space" className="py-16"></img> */}
+                        <h1 className="font-bold py-8" style={{fontFamily:"Gelato Soft Free", fontWeight: "400px", fontSize: "106px", lineHeight: "96px" }}>book a space now</h1>
+                        <img src={arrow} alt="Book a space" className="py-16"></img> 
                     </div>
+
                     <div className="">
                         {/* <div className="absolute ml-72">
                             <img src={bluerec} alt="Book a space" className="w-40 h-44"></img>
                         </div>
                         <div className="absolute ml-96 mt-10">
                             <img src={greenrec} alt="Book a space" className="w-80 h-96"></img>
-                        </div> */}
-                        <div className=" w-100">
+                        </div>  */}
+                         <div className="hidden md:block">
                             <img src={furniture} alt="Book a space" ></img>
-                        </div>
+                        </div> 
                     </div>
                 </div>
 
                 <div className="py-12 mx-20">
-                    <p className="text-2xl pb-2"> Would you like to see our space before joining? Come and visit our <br/>coworking space. Please fill out the form and our manager will get <br/>back to you asap.</p>
+                    <p className=" pb-2" style={{fontFamily: 'Montserrat', fontWeight: "500px",fontSize: "26px", lineHeight: "42px"}}> Would you like to see our space before joining? Come and visit our coworking space. Please fill out the form and our manager will get back to you asap.</p>
                 </div>
 
-                <div className="w-100">
+                <div className="w-100 mx-20 py-10">
 
                     <Calendar onChange={onChange} value={value} />
             
