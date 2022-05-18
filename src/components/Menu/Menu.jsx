@@ -20,8 +20,7 @@ const Menu = () => {
                     <span className="block h-0.5 w-8 animate-pulse bg-[#E2698D]"></span>
                 </div>
 
-
-                <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+                 <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
 
                     <div 
                     className="CROSS-ICON absolute top-0 inset-y-0 right-0 px-0 py-8"
